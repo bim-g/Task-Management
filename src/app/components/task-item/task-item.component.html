@@ -1,0 +1,11 @@
+<div class="w3-light-gray w3-padding w3-margin-bottom pointer" 
+    [ngClass]="{'w3-panel w3-leftbar w3-border-green w3-pale-green': task.reminder}"
+    (dblclick)="onToggle(task)"
+>
+    <h3>{{task.text}} <fa-icon 
+        (click)="onDelete(task)" 
+        [icon]="faTimes" 
+        [ngStyle]="{'color':'red'}" 
+        class="w3-right"></fa-icon> </h3>
+    <p>{{task.day}}</p>
+</div>

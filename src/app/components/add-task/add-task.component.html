@@ -1,0 +1,17 @@
+<form *ngIf="showAddTask" (ngSubmit)="onSubmit()" >
+    <div class="">
+        <label for="taskname">Task</label>
+        <input type="text" id="taskname" [(ngModel)]="text" class="w3-input w3-border-0 w3-border" name="taskname" placeholder="Add Task" required>
+    </div>
+    <div class="">
+        <label for="day">Day & Time</label>
+        <input type="datetime-local" id="day" [(ngModel)]="day" class="w3-input w3-border-0 w3-border" name="day" placeholder="Add Day and Time" required>
+    </div>
+    <div class="">
+        <label for="reminder">Reminder</label>
+        <input type="checkbox" id="reminder" [(ngModel)]="reminder" class="w3-margin-left w3-check w3-border-0 w3-border" name="reminer" required>
+    </div><br>
+    <input type="submit" value="Save Task" class="w3-button w3-black">
+    <hr>
+</form>
+<app-modal title="{{msgtitle}}" text="{{msgtext}}"></app-modal>
